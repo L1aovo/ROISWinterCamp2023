@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: xsstest
+    ports:
+      - "28081:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+
+
+          

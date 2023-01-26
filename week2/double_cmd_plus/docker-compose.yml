@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: double_cmd_plus
+    ports:
+      - "28084:80"

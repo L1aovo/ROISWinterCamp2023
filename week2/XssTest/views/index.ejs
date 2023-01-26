@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./public/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./public/main.css">
+    <script src="./public/main.js"></script>
+    <title>XssMe</title>
+<style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style></head>
+
+<body onload="onload()">
+    <div class="container">
+        <h1>XssMe</h1>
+        <div class="row">
+            <div class="col-sm-5 col-xs-12">
+                <form action="/" method="get">
+                    <div class="form-group">
+                        <lable for="subject">主体：</lable>
+                        <input type="text" id="subject" class="form-control" placeholder="鼎瑞" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <lable for="event">事件：</lable>
+                        <input type="text" id="event" class="form-control" placeholder="睡不着觉" name="event">
+                    </div>
+                    <div class="form-group">
+                        <lable for="event2">另一种说法：</lable>
+                        <input type="text" id="event2" class="form-control" placeholder="鼎瑞这个年纪，怎么睡得着觉" name="event2">
+                    </div>
+                    <input type="submit" value="生成" class="btn btn-primary" onclick="">
+                </form>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <div id="result" onchange="auto_grow(this)" oninput="auto_grow(this)" placeholder="" style="height: 148px;">　　鼎瑞睡不着觉是怎么回事呢？鼎瑞相信大家都很熟悉，但是鼎瑞睡不着觉是怎么回事呢，下面就让小编带大家一起了解吧。<br>　　鼎瑞睡不着觉，其实就是鼎瑞这个年纪，怎么睡得着觉，大家可能会很惊讶鼎瑞怎么会睡不着觉呢？但事实就是这样，小编也感到非常惊讶。<br>　　这就是关于鼎瑞睡不着觉的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</div>
+                <form action="/report" method="post">
+                    <div class="form-group">
+                        <label for="input1">报告</label>
+                        <input type="text" id="reportform" class="form-control" placeholder="有bug请报告给我" name="report">
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交bug</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+</body></html>

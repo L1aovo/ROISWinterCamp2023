@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: sqli
+    ports:
+      - "28080:80"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: ez_php_source
+    ports:
+      - "28082:80"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
