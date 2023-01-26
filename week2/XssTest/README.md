@@ -6,7 +6,7 @@
   alert()会导致页面一直加载bot截图不了，请尝试其他函数，eg：document.write()
   ps：多思考，多尝试
 
-访问：http://101.43.57.52:28081/?subject=1&event=1&event2=1
+访问：http://题目地址:28081/?subject=1&event=1&event2=1
 
 返回内容：
 

